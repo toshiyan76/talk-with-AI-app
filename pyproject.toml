@@ -1,0 +1,35 @@
+[project]
+name = "talk-with-ai-app"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "python-dotenv>=1.0.1",
+]
+
+[tool.uv]
+dev-dependencies = [
+    "ruff>=0.6.9",
+]
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.lint]
+
+select = [
+    "I",
+    "B",
+    "C4",
+    "E",
+    "F",
+    "W",
+    "B950",
+]
+
+# ファイルごとのエラー除外
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["F401"]
+
+
